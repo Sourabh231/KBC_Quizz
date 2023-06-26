@@ -377,13 +377,20 @@ function App() {
 
   useEffect(() => {
     questionNo > 1 && setEarned(moneyPyramid.find((prevmo) => prevmo.id === questionNo - 1).amount)
-  }, [moneyPyramid, questionNo])
+  }, [moneyPyramid, questionNo]);
+
+  const restart = ()=>{
+      window.location.reload();
+  }
   return (
     <div className="app">
       {username ? (
         <>
           <div className='main'>
-            {stop ? <h1 className='popUp'>You Earned:{earned}</h1> : (
+            {stop ?<>
+              <h1 className='popUp'>You Earned:{earned}</h1>
+              <button className='restart' onClick={restart}>Restart Game</button>
+            </>  : (
               <>
                 <div className='top'>
                   <div className='timer'><Timer setStop={setStop} questionNo={questionNo} /></div>

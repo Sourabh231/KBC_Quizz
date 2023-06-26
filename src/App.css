@@ -85,14 +85,29 @@
   right: 0;
   margin: auto;
   width: 350px;
-  height: 150px;
+  height: 190px;
   border: 2px solid white;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: #020230;
-
+  border-radius: 5px;
 }
+
+.restart{
+  position: relative;
+  bottom: 420px;
+  width: 90px;
+  padding: 3px;
+  left: 665px;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: rgb(221, 0, 255);
+  color: white;
+  
+  
+}
+
 
 .start{
   width: 250px;
@@ -131,3 +146,4 @@
   cursor: pointer;
   font-size: 18px;
 }
+
